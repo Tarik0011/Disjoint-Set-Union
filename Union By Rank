@@ -22,7 +22,7 @@ const int mxn=1e6+123;
 int a[mxn];
 
 class Disjoinset{
-	vector<int>rank,par;
+public:	vector<int>rank,par;
 public:
 	Disjoinset(int n){
 		rank.resize(n+2,0);
