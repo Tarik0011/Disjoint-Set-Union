@@ -42,7 +42,7 @@ public:
 		if(p==q)return;
 		if(size[p]<size[q]){
 			par[p]=q;
-			size[q]+=size[v];
+			size[q]+=size[p];
 		}else{
 			par[q]=p;
 			size[p]+=size[q];
