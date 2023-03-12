@@ -25,7 +25,7 @@ int dx[]={-1,1,0,0,-1,-1,1,1};
 int dy[]={0,0,-1,1,-1,1,-1,1};
 
 bool isValid(int x,int y,int n,int m){
-    if(x>=1 and x<=n and y>=1 and y<=m)return true;
+    if(x>=0 and x<n and y>=0 and y<m)return true;
     else return false;
 }
 class Disjoinset{
@@ -62,13 +62,13 @@ void solve(){
  	cin>>n>>m;
  	Disjoinset ds(n*m);
  	vector<vector<int>>grid(n+1,vector<int>(m+1,0));
- 	for(int i=1;i<=n;i++){
- 		for(int j=1;j<=m;j++){
+ 	for(int i=0;i<n;i++){
+ 		for(int j=0;j<m;j++){
  			cin>>grid[i][j];
  		}
  	}
- 	for(int i=1;i<=n;i++){
- 		for(int j=1;j<=m;j++){
+ 	for(int i=0;i<n;i++){
+ 		for(int j=0;j<m;j++){
  			if(grid[i][j]==0)continue;
  			for(int id=0;id<4;id++){
  				int newr=i+dx[id];
@@ -82,12 +82,13 @@ void solve(){
  		}
  	}
  	int mx=0;
- 	for(int i=1;i<=n*m;i++){
- 		int component=ds.size[ds.findPar(i)];
- 		mx=max(mx,component);
+ 	for(int i=0;i<n*m;i++){
+ 		cout<<ds.par[i]<<endl;
  	}
  	cout<<mx<<endl;
-  //maximum number of connected component
+	
+	//maximum number of connected component
+
 
 }
 signed main(){ 
