@@ -54,7 +54,7 @@ void solve(){
  	int n,m;
  	cin>>n>>m;
  	Disjoinset ds(n);
- 	for(int i=1;i<=n;i++){
+ 	for(int i=1;i<=m;i++){
  		int u,v;
  		cin>>u>>v;
  		ds.Union(u,v);
