@@ -1,3 +1,4 @@
+https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/practice-problems/algorithm/science-experiment-in-berland-16ad8152/
 /*
 *   -------------- ?*?*? --------------
 * |         In The Name of *Allah*     |
